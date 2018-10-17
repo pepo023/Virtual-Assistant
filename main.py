@@ -34,4 +34,6 @@ def main ():
 
 	brain(name, speech_text)
 
-main()
+
+while True:
+	main()
