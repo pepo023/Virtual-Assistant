@@ -38,12 +38,13 @@ def brain(name, speech_text):
     elif check_message(['like', 'milk']):
         general_conversations.echamela()
 
-    elif check_message(['please', 'exit']):     # provide a way out
-        exit(0)
-
     # Assistant tells the current time
     elif check_message(['time']):
         tell_time.what_is_time()
+    # Shutdown the assistant
+    elif check_message(['goodbye']):
+        general_conversations.goodbye()
+        exit(0)
 
     else:
         general_conversations.undefined()

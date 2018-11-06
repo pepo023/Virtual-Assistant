@@ -40,6 +40,8 @@ def how_are_you():
 def echamela():
     tts('Echamela toda en la boca.')
 
+def goodbye():
+    tts('Goodbye')
 
 def undefined():
     tts("I don't know what that means!")
