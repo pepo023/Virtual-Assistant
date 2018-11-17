@@ -1,5 +1,6 @@
 from GreyMatter import general_conversations
 from GreyMatter import tell_time
+from GreyMatter import define_subject
 
 
 def brain(name, speech_text):
@@ -41,6 +42,11 @@ def brain(name, speech_text):
     # Assistant tells the current time
     elif check_message(['time']):
         tell_time.what_is_time()
+
+    # Define subject from wikipedia
+    elif check_message(['define']):
+        define_subject.define_subject(speech_text)
+
     # Shutdown the assistant
     elif check_message(['goodbye']):
         general_conversations.goodbye()
