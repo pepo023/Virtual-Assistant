@@ -1,7 +1,7 @@
 from GreyMatter import general_conversations
 from GreyMatter import tell_time
 from GreyMatter import define_subject
-
+from GreyMatter import python_coding_brain
 
 def brain(name, speech_text):
 
@@ -38,6 +38,10 @@ def brain(name, speech_text):
 
     elif check_message(['like', 'milk']):
         general_conversations.echamela()
+
+    # Enter python programing mode
+    elif check_message(['code', 'in', 'python']) or check_message(['programming', 'python']):
+        python_coding_brain.python_coding_brain()
 
     # Assistant tells the current time
     elif check_message(['time']):
