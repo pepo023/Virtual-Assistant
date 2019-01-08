@@ -24,7 +24,7 @@ def main ():
 		audio = r.listen(source)
 	
 	try:
-		speech_text = r.recognize_google(audio).lower().replace("'","")
+		speech_text = r.recognize_google(audio).lower().replace("'", "")
 		print("Melissa thinks you said '" + speech_text + "'")
 	except sr.UnknownValueError:
 		print("Melissa could not understand audio")
