@@ -9,6 +9,7 @@ from GreyMatter.SenseCells.stt import stt
 from GreyMatter.SenseCells.assistant_sleep import hey_assistant
 from GreyMatter.SpeechCodingAbilities.LanguageTypeConversations import list_conversations
 from GreyMatter.general_conversations import goodbye
+from GreyMatter.SpeechCodingAbilities.PerceptronTraining import Training_the_perceptron
 
 
 def python_coding_brain():
@@ -54,5 +55,11 @@ def python_coding_brain():
             PyFile.close()
             goodbye()
             exit(0)
+
+        elif check_message(['machine', 'learning', 'mode']):
+            PyFile = open(os.path.join('C:\\Users\\Pepo0\\Documents\\Python File Playground\\', 'PyML.py'), 'w+')
+
+
+
         else:
             speech_text = hey_assistant()
